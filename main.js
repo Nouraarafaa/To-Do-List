@@ -11,14 +11,18 @@ if (localStorage.getItem('Todo-item') !== null) {
 	List = [];
 }
 
-function addTodoItem(){
-	var TodosList = {
-		item : addTodos.value
-	}
-	List.push(TodosList);
-	localStorage.setItem('Todo-item' , JSON.stringify(List));
-	ShowData();
-	addTodos.value = ""; 
+function addTodoItem() {
+    var itemText = addTodos.value.trim();
+    if (itemText === "") {
+        alert("To-do item couldn't be empty");
+        return;
+    }
+    var TodosList = { item: itemText };
+    List.push(TodosList);
+    localStorage.setItem('Todo-item', JSON.stringify(List));
+    ShowData();
+
+    addTodos.value = "";
     addTodos.focus();
 }
 function ShowData(){
