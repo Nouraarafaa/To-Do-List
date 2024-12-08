@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #352F5B;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 80px;
+}
+h2{
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+h3{
+    font-size: 26px;
+    margin-top: 25px;
+    font-weight: 500;
+}
+input{
+    font-family: "Josefin Sans", sans-serif;
+    margin: 20px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #2A2649;
+    border: none;
+    height: 40px;
+    width: 450px;
+    border-radius: 8px;
+    color: #b9b9b9;
+}
+input:focus{
+    outline: 3px solid rgb(67, 49, 118);
+}
+.addTodo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#addBtn{
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    width:fit-content ;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#addBtn:hover{
+    border: 1px solid #fff;
+    background-color: #352F5B;
+    color: #fff;
+}
+#list-item {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    font-size: 26px;
+    background-color: #423A6F;
+    padding: 18px;
+    border-radius: 6px;
+    margin: 5px;
+    width: 100%; 
+    flex-wrap: wrap; 
+    gap: 350px; 
+    word-break: break-word; 
+}
+
+#list-item i:hover{
+    color: rgb(142, 29, 29);
+    cursor: pointer;
+}
+@media screen and (max-width : 768px){
+    .container{
+        padding: 30px;
+    }
+    input{
+        width: 300px;
+    }
+    #list-item {
+        padding: 10px;
+        gap: 100px; 
+    }
+}
+@media screen and (max-width : 992px){
+    #list-item {
+        padding: 10px;
+        gap: 100px; 
+    }
+}
